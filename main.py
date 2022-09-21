@@ -1,7 +1,7 @@
 #funcion para imprimir el menu
 def menu():
 	print("1. Crear contacto")
-	pritnt("2. Lista blanca")
+	print("2. Lista blanca")
 	print("3. Lista negra")
 	print("4. Borrar contacto")
 	print("5. Buscar contacto")
@@ -24,7 +24,7 @@ while menu_sel != 6:
 		like = input("Te agrada? (si/no)")
 		if like == "si":
 			estado.append(True)
-		elif like == "no"
+		elif like == "no":
 			estado.append(False)
 		else
 			print("Error")
@@ -38,3 +38,4 @@ while menu_sel != 6:
 
 	elif menu_sel != 6:
 		menu()
+
