@@ -26,7 +26,7 @@ while menu_sel != 6:
 			estado.append(True)
 		elif like == "no":
 			estado.append(False)
-		else
+		else:
 			print("Error")
 	elif  menu_sel == 2:
 
