@@ -1,25 +1,20 @@
 use std::io;
 
-struct contact{
+struct Contact{
     nombre: String,
     numero: u16,
     direccion: String,
     like: bool,
 }
 
-let mut opcion:u8;
-let mut lista:contact;
-let mut temp:contact;
-let mut posi:u16;
-let mut positmp:u16;
-
-
 fn main(){
-    opcion = 0;
-    poi = 0;
-    positmp = 0;
+    let mut opcion: char = '0';
+    let mut lista: Contact;
+    let mut temp: Contact;
+    let mut posi: u16 = 0;
+    let mut positmp: u16 = 0;
 
-    while(opcion != 6){
+    while opcion != '6'{
         menu();
 
         io::stdin()
