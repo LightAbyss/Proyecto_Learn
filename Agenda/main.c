@@ -114,8 +114,7 @@ void borrar(){
     printf("¿Cual contacto desea borrar?\n");
     scanf("%s",&nametmp);
     for(positmp = 0; positmp <= posi ; positmp++){
-        switch (fase)
-        {
+        switch (fase){
         case 0: //Buscar el contacto y eliminar sus datos
             if(!strcmp(nametmp,lista[positmp].nombre)){
                 fase = 1;
@@ -133,14 +132,26 @@ void borrar(){
         }
     }
     if(fase == 0){
-        printf("Contacto no encontrado");
-    }else{
-        printf("Eliminado exitoso");
+        printf("Contacto no encontrado\n");
+    }else{ //Aviso exitoso y disminuido el contador de contactos
+        printf("Eliminado exitoso\n");
+        posi--;
     }
 
 }
 
 void buscar(){
-
+    char nametmp[20];
+    char test=0;
+    printf("¿Cual el nombre del contacto?\n");
+    scanf("%s",&nametmp);
+    for(positmp = 0; positmp <= posi ; positmp++){
+        //Buscar el contacto y mostrar resultados
+        if(!strcmp(nametmp,lista[positmp].nombre)){
+            printf("Numero: %d\n",lista[positmp].numero);
+            printf("Direccion: %s\n",lista[positmp].direccion);
+            printf("Lista blanca? %c\n",lista[positmp].like);
+        }
+    }
 
 }
