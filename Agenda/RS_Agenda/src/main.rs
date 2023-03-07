@@ -8,18 +8,20 @@ struct Contact{
 }
 
 fn main(){
-    let mut opcion: char = '0';
+    let mut opcion: u16 = 0;
     let mut lista: Contact;
     let mut temp: Contact;
     let mut posi: u16 = 0;
     let mut positmp: u16 = 0;
+    let mut auxstring = String::new();
 
-    while opcion != '6'{
+    while opcion != 6{
         menu();
 
         io::stdin()
-            .read_line(&mut opcion)
+            .read_line(&mut auxstring)
             .expect("Error de lectura");
+        opcion = auxstring.parse().unwrap();
     }
 
 }
