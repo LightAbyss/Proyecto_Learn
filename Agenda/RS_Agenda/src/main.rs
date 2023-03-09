@@ -1,4 +1,5 @@
 use std::io;
+use scanf::scanf;
 
 struct Contact{
     nombre: String,
@@ -18,9 +19,10 @@ fn main(){
     while opcion != 6{
         menu();
 
-        io::stdin()
-            .read_line(&mut auxstring)
-            .expect("Error de lectura");
+        if scanf!("{}", opcion).is_ok() {
+        }else{
+            println!("Error de lectura");
+        }
         opcion = auxstring.parse().unwrap();
     }
 
